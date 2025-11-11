@@ -1,0 +1,53 @@
+[provider]
+anghami = "anghami.com"
+qobuz = "qobuz.com"  # 好像需要会员
+applemusic = "apple.com"
+amazonmusic = "amazon.com"  # 只有专辑链接
+audiomack = "audiomack.com"
+vevo = "vevo.com"  # 音乐视频发行平台
+tidal = "tidal.com"
+recordshopx = "recordshopx.com"  # 缺少歌手信息
+cdbaby = "cdbaby.com"  # 音乐发行与版权分发平台
+7digital = "7digital.com"  # 声音/音乐服务公司
+joox = "joox.com"
+boomplay = "boomplay.com"
+spotify = "spotify.com"
+deezer = "deezer.com"
+youtube = "youtube.com"
+pandora = "pandora.com"
+soundcloud = "soundcloud.com"
+napster = "napster.com"  # 注册不了
+bandcamp = "bandcamp.com"
+thevinyldivision = "arduamusic.com"  # 好像是卖cd,不是流媒体
+jbhifi = "jbhifi.com.au"  # 卖硬件的
+emp = "emp-online.com"  # 不知道是不是这个网站，卖服装的
+nuclearblast = "nuclearblast.com"  # 卖cd
+yandexmusic = "yandex.com"  # 验证码比较难搞
+playlistregister = "playlistregister.com"  # 没明白，似乎是歌单
+iheart = "iheart.com"  # 似乎是播客
+vkmusic = "vkmusic.ca"  # 卖硬件的
+
+[Odesli]
+provider = ["spotify", "itunes", "applemusic", "youtube", "google",
+    "pandora", "deezer", "tidal", "amazonmusic", "soundcloud", "napster",
+    "yandexmusic", "spinrilla", "audius", "anghami", "boomplay", "audiomack", "isrc",
+    "upc", "bandcamp"]
+
+[crawler]
+use_odesli = false
+proxy = "http://127.0.0.1:7890"
+
+[crawler.headers]
+user-agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+
+[crawler.browser]
+headless = true
+timeout = 6000
+
+[crawler.parse_flags]
+album = ["/album/", "/albums/"]
+song = ["/song/", "/songs/", "/single/", "/track/"]
+share = []
+
+[server]
+port = 8180
