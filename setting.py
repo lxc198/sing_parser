@@ -11,7 +11,7 @@ def get_config():
     获取配置文件。
     Get the configuration file.
     """
-    with open("/Users/lxc/PycharmProjects/sing_parser/config/config.toml", "r", encoding="utf-8") as f:
+    with open("config/config.toml", "r", encoding="utf-8") as f:
         config = toml.load(f)
     return config
 
