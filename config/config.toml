@@ -34,7 +34,7 @@ provider = ["spotify", "itunes", "applemusic", "youtube", "google",
     "upc", "bandcamp"]
 
 [crawler]
-use_odesli = false
+use_odesli = true
 proxy = "http://127.0.0.1:7890"
 
 [crawler.headers]
